@@ -1,0 +1,46 @@
+/* styles/Layout.module.css */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }  
+
+.content {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+}
+.main {
+    flex: 1;
+    padding: 20px;
+    min-width: 800px;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .contentContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    transition: grid-template-columns 0.3s ease-in-out;
+  }
+  
+  .expanded {
+    grid-template-columns: 300px 1fr; /* Sidebar expandido */
+  }
+  
+  .collapsed {
+    grid-template-columns: 60px 1fr; /* Sidebar colapsado */
+  }
+  
+  .mainContent {
+    overflow: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  

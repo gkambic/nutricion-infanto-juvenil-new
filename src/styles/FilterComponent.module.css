@@ -1,0 +1,16 @@
+.filterContainer {
+  width: 100%;
+  padding: 1rem;
+}
+
+.p-float-label {
+  width: 100%;
+}
+
+.p-col-12 {
+  padding: 0.5rem;
+}
+
+.filter-item {
+  margin-bottom: 1rem;
+}

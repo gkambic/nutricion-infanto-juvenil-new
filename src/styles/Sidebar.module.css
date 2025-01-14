@@ -1,0 +1,61 @@
+.sidebar {
+  height: 100%;
+/*   background-color: #2c3e50;
+  color: white; */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.expanded {
+  width: 300px;
+}
+
+.collapsed {
+  width: 60px;
+}
+
+.sidebar .p-panelmenu {
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+
+.sidebar .p-panelmenu .p-panelmenu-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+}
+
+.collapsed .p-panelmenu .p-panelmenu-header .p-panelmenu-text {
+  display: none; /* Oculta el texto del menú en modo colapsado */
+}
+
+.collapsed .p-panelmenu .p-panelmenu-header {
+  justify-content: center; /* Centra los íconos */
+}
+
+.sidebar .p-panelmenu .p-panelmenu-content {
+  display: block; /* Asegúrate de que el submenu esté disponible */
+  margin-left: 20px; /* Desplaza el submenu */
+}
+
+
+.iconMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconItem {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.iconItem i {
+  font-size: 1.5rem;
+}
