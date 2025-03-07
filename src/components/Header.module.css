@@ -1,0 +1,35 @@
+/* .header {
+    width: 100%;
+  }
+  
+  .homeHeader {
+    position: absolute;
+    z-index: 1000;
+  } */
+
+  .header {
+    position: fixed; /* Fija la barra en la parte superior de la pantalla */
+    top: 0; /* Mantiene la barra en la parte superior */
+    left: 0;
+    width: 100%; /* Se extiende a todo el ancho de la pantalla */
+    z-index: 1000; /* Se asegura de estar por encima de otros elementos */
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco con transparencia */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil */
+    backdrop-filter: blur(10px); /* Difumina el fondo detrás de la barra */
+    transition: background-color 0.3s ease; /* Transición para cambios suaves */
+}
+
+.homeHeader {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo más transparente en la página de inicio */
+}
+
+.logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px; /* Ajusta el relleno en pantallas más pequeñas */
+    }
+}

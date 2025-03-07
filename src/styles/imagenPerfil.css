@@ -1,0 +1,16 @@
+.profileWrapper {
+    /* Borde multicolor usando un gradiente cónico */
+    background: conic-gradient(green, yellow, red, green);
+    padding: 5px; /* Ajusta el grosor del borde */
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .profileImage {
+    width: 150px; /* Tamaño deseado */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    display: block;
+  }

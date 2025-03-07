@@ -8,20 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        "custom-blue": "#243c5a",
-      },
-
-      screens: {
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px',
-        '3xl': '1792px',
-        '4xl': '2048px',
-      },
-
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
