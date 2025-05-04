@@ -1,4 +1,16 @@
-import React, { useState } from "react";
+import React from 'react';
+import TeamSection from '../../../components/TeamSection';
+//import Layout from '../../components/Layout';
+
+const EquipoPage: React.FC = () => {
+  return (
+      <TeamSection />
+  );
+};
+
+export default EquipoPage;
+
+/* import React, { useState } from "react";
 import { Timeline } from "primereact/timeline";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
@@ -187,3 +199,4 @@ export default function profesionales() {
     </div>
   );
 }
+ */

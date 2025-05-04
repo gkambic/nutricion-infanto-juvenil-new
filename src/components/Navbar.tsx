@@ -8,10 +8,13 @@ import { Avatar } from 'primereact/avatar';
 import { useRouter } from "next/navigation";
 import styles from './Header.module.css';
 import { usePathname } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
 
   const router = useRouter();
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
 
   const itemRenderer = (item: MenuItem) => (
     <a className="flex align-items-center p-menuitem-link">
@@ -66,11 +69,22 @@ const start = <img alt="logo" src="/Logo.png" className="mr-2 logo"></img>;
     </div>
 ); */
 
-const pathname = usePathname();
+/* const pathname = usePathname();
 const headerClassName =
 pathname === '/home' ? `${styles.header} ${styles.homeHeader}` : `${styles.header}`;
+ */
 
+useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
+  const headerClassName = `${styles.header} ${pathname === '/home' ? styles.homeHeader : ''} ${scrolled ? styles.scrolled : ''}`;
+
+  
 return (
     <div className={headerClassName}>
         <Menubar model={items} start={start} />

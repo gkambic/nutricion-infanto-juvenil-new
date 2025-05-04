@@ -7,20 +7,27 @@
     z-index: 1000;
   } */
 
-  .header {
-    position: fixed; /* Fija la barra en la parte superior de la pantalla */
-    top: 0; /* Mantiene la barra en la parte superior */
+  /* Header.module.css */
+.header {
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%; /* Se extiende a todo el ancho de la pantalla */
-    z-index: 1000; /* Se asegura de estar por encima de otros elementos */
-    background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco con transparencia */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil */
-    backdrop-filter: blur(10px); /* Difumina el fondo detrás de la barra */
-    transition: background-color 0.3s ease; /* Transición para cambios suaves */
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
 }
 
 .homeHeader {
-    background-color: rgba(255, 255, 255, 0.3); /* Fondo más transparente en la página de inicio */
+    /* Opcional: ajustes específicos para la página home */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Cuando se scrollea, el fondo se vuelve menos transparente */
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .logo {
@@ -30,6 +37,7 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 10px; /* Ajusta el relleno en pantallas más pequeñas */
+        padding: 10px;
     }
 }
+
